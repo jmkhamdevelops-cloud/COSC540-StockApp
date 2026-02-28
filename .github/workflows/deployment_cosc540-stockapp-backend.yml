@@ -37,9 +37,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r Backend/requirements.txt
 
-      - name: Run collectstatic
-        run: python manage.py collectstatic
-
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v4
         with:
