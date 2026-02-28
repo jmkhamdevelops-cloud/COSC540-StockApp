@@ -83,6 +83,8 @@ export default function Dashboard() {
     const { me } = useAuth();
 
     const [holdingData, setHoldingData] = useState([])
+    const [stockData, setStockData] = useState([])
+
 
     useEffect(() => {
         async function load() {
@@ -91,6 +93,16 @@ export default function Dashboard() {
         }
         load();
     }, []);
+
+        useEffect(() => {
+        async function load() {
+            const data = await getCurrentHoldings();
+            setStockData(stockData);
+        }
+        load();
+    }, []);
+
+    console.log(stockData);
   
     return (
         <Row gutter={[16, 16]}>
