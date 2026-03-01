@@ -78,6 +78,7 @@ TEMPLATES = [
     },
 ]
 
+STATIC_ROOT = BASE_DIR/'staticfiles'
 WSGI_APPLICATION = 'config.wsgi.application'
 
 
@@ -147,3 +148,5 @@ REST_FRAMEWORK = {
       "rest_framework.filters.SearchFilter",
     ],
 }
+
+STATIC_URL = 'static/'
